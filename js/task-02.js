@@ -12,11 +12,8 @@ const createList = document.querySelector("#ingredients");
 const ingredient = ingredients.map((product) => {
   // Додати клас
   const item = document.createElement("li");
+  item.textContent = product;
   item.classList.add("item");
-
-  const itemName = document.createElement("p");
-  itemName.textContent = product;
-  item.appendChild(itemName);
 
   return item;
 })

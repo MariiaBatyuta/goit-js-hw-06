@@ -13,5 +13,5 @@ function getRandomHexColor() {
 function changeColor() {
   const color = getRandomHexColor();
   backgroundChange.body.style.backgroundColor = color;
-  backgroundChange.nameColor = color;
+  backgroundChange.nameColor.textContent = color;
 }

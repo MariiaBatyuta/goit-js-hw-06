@@ -23,6 +23,10 @@ button {
   cursor: pointer;
 }
 
+.itemTask3 {
+  list-style-type: none;
+}
+
 .imgTask3 {
   display: flex;
   width: 300px;

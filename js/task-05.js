@@ -6,5 +6,5 @@ const input = {
 input.inputName.addEventListener("input", enterText);
 
 function enterText(evt) {
-    evt.currentTarget.value < 1 ? (input.outputName.textContent = "Anonymous") : (input.outputName.textContent = evt.currentTarget.value);
+    evt.currentTarget.value.trim() < 1 ? (input.outputName.textContent = "Anonymous") : (input.outputName.textContent = evt.currentTarget.value);
 }

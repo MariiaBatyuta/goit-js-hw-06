@@ -5,6 +5,7 @@ const changeSize = {
 
 changeSize.input.addEventListener('input', sizeSlider);
 
-function sizeSlider(evt) {
-    changeSize.text.style.fontSize = `${evt.currentTarget.value}px`
+function sizeSlider() {
+    changeSize.text.style.fontSize = `${changeSize.input.value}px`
 }
+sizeSlider();

@@ -1,7 +1,8 @@
 // Задача №1.
 
 const category = document.querySelector('#categories');
-console.dir("Number of categories:", category.children.length);
+const categoryCounter = category.children.length;
+console.dir(`Number of categories: ${categoryCounter}`);
 
 //Задача №2.
 
