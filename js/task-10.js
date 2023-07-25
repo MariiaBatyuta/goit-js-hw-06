@@ -16,22 +16,32 @@ function amount (evt) {
 let basebox = 30;
 
 function create() {
+  
   let amountBox = Number(variables.input.getAttribute("amount"));
 
-  for (let i = 0; i < amountBox; ++i) {
-    basebox += 10;
+  let min = Number(variables.input.min);
+  let max = Number(variables.input.max);
+  let step = Number(variables.input.step);
 
-    const newBox = document.createElement("div");
-    newBox.style.background = getRandomHexColor();
-    newBox.style.width = basebox + "px";
-    newBox.style.height = basebox + "px";
-    newBox.style.margin = "10px";
-    variables.controls.append(newBox);
-  }
+  if (amountBox >= min && amountBox <= max) {
+    for (let i = 0; i < amountBox; i += step) {
+      basebox += 10;
+
+      const newBox = document.createElement("div");
+      newBox.style.background = getRandomHexColor();
+      newBox.style.width = basebox + "px";
+      newBox.style.height = basebox + "px";
+      newBox.style.margin = "10px";
+      variables.controls.append(newBox);
+    }
+  } else {
+    alert(`Enter a valid number: from ${min} to ${max}`)
+  }  
 }
 
 function destroy() {
   variables.controls.innerHTML = '';
+  variables.input = '';
 }
 
 
